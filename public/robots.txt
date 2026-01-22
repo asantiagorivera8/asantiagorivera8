@@ -1,0 +1,11 @@
+# robots.txt for TechBiz
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://techbizonline.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /wp-admin/

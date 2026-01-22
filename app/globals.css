@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-gray-100 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+  }
+
+  .card-dark {
+    @apply bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105;
+  }
+
+  .input-dark {
+    @apply bg-gray-800 border border-gray-600 text-gray-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300;
+  }
+
+  /* Optimized Hero Slide Transitions for Better Engagement */
+  .hero-slide-content {
+    animation: heroSlideEnter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .hero-slide-content.reduced-motion {
+    animation: heroSlideEnterReduced 0.3s ease-out forwards;
+  }
+
+  .hero-badge {
+    animation: heroElementEnter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s both;
+  }
+
+  .hero-title {
+    animation: heroElementEnter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
+  }
+
+  .hero-title-line {
+    animation: heroElementEnter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s both;
+  }
+
+  .hero-highlight {
+    animation: heroElementEnter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+  }
+
+  .hero-subtitle {
+    animation: heroElementEnter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.25s both;
+  }
+
+  .hero-buttons {
+    animation: heroElementEnter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+  }
+
+  /* Reduced motion variants */
+  .hero-slide-content.reduced-motion .hero-badge,
+  .hero-slide-content.reduced-motion .hero-title,
+  .hero-slide-content.reduced-motion .hero-title-line,
+  .hero-slide-content.reduced-motion .hero-highlight,
+  .hero-slide-content.reduced-motion .hero-subtitle,
+  .hero-slide-content.reduced-motion .hero-buttons {
+    animation: heroElementEnterReduced 0.2s ease-out both;
+  }
+}
+
+@layer utilities {
+  /* Mobile-optimized gradient animation for hero highlights */
+  @keyframes gradient-x-mobile {
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  .animate-gradient-x-mobile {
+    animation: gradient-x-mobile 3s ease infinite;
+  }
+
+  /* Desktop gradient animation (existing) */
+  .animate-gradient-x {
+    animation: gradient-x 4s ease infinite;
+  }
+
+  /* Mobile-specific hero positioning */
+  @media (max-width: 767px) {
+    .hero-mobile-center {
+      margin-top: -4rem;
+      padding-top: 2rem;
+    }
+
+    /* Ensure mobile gradient animation takes precedence */
+    .hero-highlight {
+      animation: gradient-x-mobile 3s ease infinite !important;
+    }
+  }
+
+  /* Desktop-specific hero positioning */
+  @media (min-width: 768px) {
+    .hero-highlight {
+      animation: gradient-x 4s ease infinite !important;
+    }
+  }
+
+  /* Optimized Hero Animations for Faster Engagement */
+  @keyframes heroSlideEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(15px) scale(0.99);
+      filter: blur(1px);
+    }
+    60% {
+      opacity: 0.8;
+      transform: translateY(5px) scale(0.995);
+      filter: blur(0.5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes heroSlideEnterReduced {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes heroElementEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    70% {
+      opacity: 0.9;
+      transform: translateY(2px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes heroElementEnterReduced {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Existing animations */
+  @keyframes gradient-x {
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes float-delayed {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 4s ease infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+
+  /* Optimized transitions for mobile engagement */
+  @media (max-width: 768px) {
+    .hero-slide-content {
+      animation-duration: 0.5s;
+    }
+
+    .hero-badge,
+    .hero-title,
+    .hero-title-line,
+    .hero-highlight,
+    .hero-subtitle,
+    .hero-buttons {
+      animation-duration: 0.4s;
+    }
+
+    /* Mobile-specific hero content positioning */
+    .hero-content-mobile {
+      transform: translateY(-2rem);
+      padding-top: 1rem;
+    }
+  }
+
+  /* High performance mode for older devices */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide-content,
+    .hero-badge,
+    .hero-title,
+    .hero-title-line,
+    .hero-highlight,
+    .hero-subtitle,
+    .hero-buttons {
+      animation-duration: 0.15s !important;
+      animation-delay: 0s !important;
+    }
+
+    .animate-gradient-x,
+    .animate-gradient-x-mobile {
+      animation: none !important;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa, #60a5fa) !important;
+    }
+  }
+
+  /* Glass effects */
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-button {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300;
+  }
+}
