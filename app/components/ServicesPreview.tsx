@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Users, GraduationCap, Shield, Brain, TrendingUp, BookOpen, UserCheck, Heart, ArrowRight } from "lucide-react"
+import { Users, GraduationCap, Shield, Brain, TrendingUp, BookOpen, UserCheck, Heart, ArrowRight, Rocket } from "lucide-react"
 
 const services = [
   {
@@ -57,6 +57,13 @@ const services = [
     description: "Publicaciones expertas en ciberseguridad y marketing digital.",
     href: "/libros",
     color: "text-pink-400",
+  },
+  {
+    icon: Rocket,
+    title: "TaskHero 360°",
+    description: "Plataforma todo-en-uno para profesionales: cotizaciones, facturas, inventario y automatizacion.",
+    href: "/taskhero",
+    color: "text-orange-400",
   },
 ]
 
