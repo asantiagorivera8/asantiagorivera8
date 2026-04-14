@@ -103,13 +103,22 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1186792476557775');
+              fbq('init', '1436746707627312');
               fbq('track', 'PageView');
             `,
           }}
         />
 
-        {/* Metaetiquetas adicionales para SEO y redes sociales */}
+        {/* Meta Pixel noscript fallback */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1436746707627312&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
