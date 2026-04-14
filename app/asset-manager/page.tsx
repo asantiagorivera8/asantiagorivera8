@@ -107,6 +107,37 @@ export default function AssetManagerPage() {
             <DemoRequestForm />
           </div>
 
+          {/* Sección de Precios */}
+          <div className="bg-gray-800 rounded-xl p-12 border border-gray-700">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-2">Planes Transparentes y Flexibles</h2>
+              <p className="text-gray-400 mb-8">30 días gratis en cualquier plan, sin tarjeta de crédito</p>
+              <Link
+                href="/asset-manager/pricing"
+                className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Ver Todos los Planes →
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-gray-900 rounded-lg p-6 border border-gray-700">
+                <p className="text-sm text-gray-400 mb-2">Starter</p>
+                <p className="text-3xl font-bold text-white">$24.99<span className="text-lg text-gray-400">/mes</span></p>
+                <p className="text-sm text-gray-500 mt-1">Hasta 100 activos</p>
+              </div>
+              <div className="bg-blue-900/30 rounded-lg p-6 border-2 border-blue-600">
+                <p className="text-sm text-blue-400 mb-2 font-semibold">Business · Más Popular</p>
+                <p className="text-3xl font-bold text-white">$49.99<span className="text-lg text-gray-400">/mes</span></p>
+                <p className="text-sm text-gray-400 mt-1">Hasta 500 activos · 5 usuarios</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-6 border border-gray-700">
+                <p className="text-sm text-gray-400 mb-2">Pro</p>
+                <p className="text-3xl font-bold text-white">$99.99<span className="text-lg text-gray-400">/mes</span></p>
+                <p className="text-sm text-gray-500 mt-1">Activos ilimitados · Usuarios ilimitados</p>
+              </div>
+            </div>
+          </div>
+
           {/* CTA Final */}
           <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-12 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
