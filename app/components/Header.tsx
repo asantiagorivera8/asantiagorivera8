@@ -92,6 +92,9 @@ export default function Header() {
                   <Link href="/taskhero" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">
                     TaskHero 360°
                   </Link>
+                  <Link href="/asset-manager" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">
+                    Asset Manager
+                  </Link>
                 </div>
               )}
             </div>
@@ -196,6 +199,9 @@ export default function Header() {
               </Link>
               <Link href="/taskhero" className="block px-6 py-2 text-gray-300 hover:text-white" onClick={handleLinkClick}>
                 TaskHero 360°
+              </Link>
+              <Link href="/asset-manager" className="block px-6 py-2 text-gray-300 hover:text-white" onClick={handleLinkClick}>
+                Asset Manager
               </Link>
 
               <Link href="/blog" className="block px-4 py-3 text-gray-300 hover:text-white" onClick={handleLinkClick}>
