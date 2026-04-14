@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Users, GraduationCap, Shield, Brain, TrendingUp, BookOpen, UserCheck, Heart, ArrowRight, Rocket } from "lucide-react"
+import { Users, GraduationCap, Shield, Brain, TrendingUp, BookOpen, UserCheck, Heart, ArrowRight, Rocket, HardDrive } from "lucide-react"
 
 const services = [
   {
@@ -64,6 +64,13 @@ const services = [
     description: "Plataforma todo-en-uno para profesionales: cotizaciones, facturas, inventario y automatizacion.",
     href: "/taskhero",
     color: "text-orange-400",
+  },
+  {
+    icon: HardDrive,
+    title: "Asset Manager by TechBiz",
+    description: "Gestión inteligente de activos tecnológicos: hardware, software y equipos.",
+    href: "/asset-manager",
+    color: "text-blue-500",
   },
 ]
 
