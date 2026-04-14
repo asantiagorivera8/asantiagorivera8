@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -76,8 +77,9 @@ export default function RootLayout({
     <html lang="es">
       <head>
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PV1DGNNM9Q"></script>
-        <script
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PV1DGNNM9Q" />
+        <Script
+          id="gtag-config"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -89,7 +91,8 @@ export default function RootLayout({
         />
 
         {/* Meta Pixel Code */}
-        <script
+        <Script
+          id="facebook-pixel"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -105,15 +108,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1186792476557775&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
 
         {/* Metaetiquetas adicionales para SEO y redes sociales */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
